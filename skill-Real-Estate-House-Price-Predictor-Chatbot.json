@@ -1,0 +1,1059 @@
+{
+  "name": "Real Estate House Price Predictor Chatbot",
+  "intents": [
+    {
+      "intent": "General_Greetings",
+      "examples": [
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "What's up?"
+        },
+        {
+          "text": "Who is this?"
+        },
+        {
+          "text": "You there"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "yo"
+        },
+        {
+          "text": "hiya"
+        },
+        {
+          "text": "Good day"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good to see you"
+        },
+        {
+          "text": "Greetings"
+        },
+        {
+          "text": "Have you been well?"
+        },
+        {
+          "text": "Hello Agent"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hello I am looking for some help here"
+        },
+        {
+          "text": "Hey how are you doing"
+        },
+        {
+          "text": "Hey there all"
+        },
+        {
+          "text": "Hey there"
+        },
+        {
+          "text": "Hey twin"
+        },
+        {
+          "text": "Hey you"
+        },
+        {
+          "text": "Hi advisor"
+        },
+        {
+          "text": "Hi there"
+        },
+        {
+          "text": "How are things going?"
+        },
+        {
+          "text": "How are you today?"
+        },
+        {
+          "text": "How have you been?"
+        },
+        {
+          "text": "How is it going?"
+        },
+        {
+          "text": "How r u?"
+        },
+        {
+          "text": "Looking good eve"
+        },
+        {
+          "text": "What's new?"
+        }
+      ],
+      "description": "Greetings"
+    },
+    {
+      "intent": "Thanks",
+      "examples": [
+        {
+          "text": "thx"
+        },
+        {
+          "text": "thank you very much"
+        },
+        {
+          "text": "that's nice of you"
+        },
+        {
+          "text": "i appreciate it"
+        },
+        {
+          "text": "many thanks"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "much appreciated"
+        },
+        {
+          "text": "thank you"
+        }
+      ],
+      "description": "Thanks"
+    },
+    {
+      "intent": "Get_Prediction",
+      "examples": [
+        {
+          "text": "how much is the house"
+        },
+        {
+          "text": "house price"
+        },
+        {
+          "text": "what is the price of the house?"
+        },
+        {
+          "text": "what does this house cost"
+        },
+        {
+          "text": "cost of the house"
+        },
+        {
+          "text": "house cost"
+        },
+        {
+          "text": "how much the house costs?"
+        },
+        {
+          "text": "price of the house"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Help",
+      "examples": [
+        {
+          "text": "help me"
+        },
+        {
+          "text": "help me decide"
+        },
+        {
+          "text": "help"
+        },
+        {
+          "text": "can you assist me"
+        },
+        {
+          "text": "can you help"
+        },
+        {
+          "text": "i need assistance"
+        }
+      ],
+      "description": "Ask for help"
+    },
+    {
+      "intent": "Goodbye",
+      "examples": [
+        {
+          "text": "so long"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "ciao"
+        },
+        {
+          "text": "arrivederci"
+        },
+        {
+          "text": "see ya"
+        },
+        {
+          "text": "good bye"
+        }
+      ],
+      "description": "Good byes"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "holiday",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "memorial day",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "christmas eve",
+          "synonyms": [
+            "x mas eve",
+            "x-mas eve",
+            "xmas eve"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "labor day",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "independence day",
+          "synonyms": [
+            "7/4",
+            "fourth of july",
+            "july 4",
+            "july 4th",
+            "july fourth"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "valentine's day",
+          "synonyms": [
+            "valentine day",
+            "valentines day"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "christmas",
+          "synonyms": [
+            "christmas day",
+            "x man day",
+            "xmas",
+            "x mas",
+            "x-mas",
+            "x-mas day",
+            "xmas day"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "halloween",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "thanksgiving",
+          "synonyms": [
+            "turkey day"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "new years eve",
+          "synonyms": [
+            "12-31",
+            "12/31",
+            "dec 31",
+            "dec 31st",
+            "new year's eve"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "new years",
+          "synonyms": [
+            "1/1",
+            "jan 1",
+            "jan 1st",
+            "jan first",
+            "january 1",
+            "january 1st",
+            "january first",
+            "new year",
+            "new year day",
+            "new years day"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "specialist",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Barbara",
+          "synonyms": [
+            "barbra"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Nicholas",
+          "synonyms": [
+            "nick"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Brenda",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Derrik",
+          "synonyms": [
+            "derek",
+            "derik",
+            "derrik",
+            "derrick"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Maria",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Robert",
+          "synonyms": [
+            "bob"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "phone",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "US Phone pattern",
+          "patterns": [
+            "(\\d{3})-(\\d{3})-(\\d{4})"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "landmark",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "times square",
+          "synonyms": [
+            "time sqaure",
+            "time square",
+            "times sqaure"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "grand central",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "empire state building",
+          "synonyms": [
+            "empire state",
+            "emprire state"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "zip_code",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "US Zip",
+          "patterns": [
+            "(\\b|\\s)\\d{5}(\\b|\\s)"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    },
+    {
+      "entity": "square_footage_land_space",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "reply",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": [
+            "definitely",
+            "go for it",
+            "let's do it",
+            "ok",
+            "please",
+            "sure",
+            "why not",
+            "yeah",
+            "yes",
+            "you bet",
+            "you betcha",
+            "yep"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "no",
+          "synonyms": [
+            "definitely not",
+            "don't think so",
+            "dont think so",
+            "i think not",
+            "nope",
+            "not at this time",
+            "not now"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "square_footage_living_space",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "living space",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "A virtual assistant for customer service sample",
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please rate the condition of the apartment from 1 to 5 (1-worst,5-best)"
+      },
+      "parent": "slot_31_1553772815940",
+      "event_name": "focus",
+      "dialog_node": "handler_33_1553772815940",
+      "previous_sibling": "handler_32_1553772815940"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_31_1553772815940",
+      "context": {
+        "condition": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_32_1553772815940"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter the square footage of the interior housing space that is below ground level"
+      },
+      "parent": "slot_40_1553772863254",
+      "event_name": "focus",
+      "dialog_node": "handler_42_1553772863254",
+      "previous_sibling": "handler_41_1553772863254"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_40_1553772863254",
+      "context": {
+        "sqft_basement": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_41_1553772863254"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter square footage of the living space"
+      },
+      "parent": "slot_52_1553772927305",
+      "event_name": "focus",
+      "dialog_node": "handler_54_1553772927305",
+      "previous_sibling": "handler_53_1553772927305"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_52_1553772927305",
+      "context": {
+        "sqft_living": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_53_1553772927305"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Hello. Good evening! I’m your guide for real estate property prices. I can provide you with the estimated price of properties.",
+            "Hello. Good evening! Ask me about your future house with details provided and I can calculate the approximate price of the house for you :)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_13_1502484041694",
+      "metadata": {},
+      "conditions": "now().after('17:00:00')",
+      "dialog_node": "node_15_1488295465298",
+      "previous_sibling": "node_1_1495022305143"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Hello. Good afternoon! I’m your guide for real estate property prices. I can provide you with the estimated price of properties.",
+            "Hello. Good afternoon! Ask me about your future house with details provided and I can calculate the approximate price of the house for you :)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_13_1502484041694",
+      "metadata": {},
+      "conditions": "now().after('12:00:00') && now().before('16:59:59')",
+      "dialog_node": "node_1_1495022305143",
+      "previous_sibling": "node_16_1488295517679"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Hi, I am a real estate house price predictor! Ask me about any house with details provided and I can calculate the approximate price of the house :)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_13_1502484041694",
+      "metadata": {},
+      "dialog_node": "node_28_1522448362216",
+      "previous_sibling": "node_15_1488295465298"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Hello. Good morning! I’m your guide for real estate property prices. I can provide you with the estimated price of properties.",
+            "Hello. Good morning! Ask me about your future house with details provided and I can calculate the approximate price of the house for you :)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_13_1502484041694",
+      "metadata": {},
+      "conditions": "now().after('04:00:00') && now().before('11:59:59')",
+      "dialog_node": "node_16_1488295517679"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter 1 for yes or 0 for no whether the apartment was overlooking the waterfront or not"
+      },
+      "parent": "slot_25_1553772724200",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_27_1553772724200",
+      "previous_sibling": "handler_26_1553772724200"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_25_1553772724200",
+      "context": {
+        "waterfront": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_26_1553772724200"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1553772441778",
+      "context": {
+        "bathrooms": "@sys-number"
+      },
+      "metadata": {},
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_10_1553772441778",
+      "previous_sibling": "handler_11_1553772441778"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter number of bathrooms"
+      },
+      "parent": "slot_9_1553772441778",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_11_1553772441778"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [
+            "So long",
+            "See ya",
+            "Good bye"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1516824993307",
+      "metadata": {},
+      "conditions": "#Goodbye",
+      "dialog_node": "node_12_1468329566917",
+      "previous_sibling": "node_13_1502484041694"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [
+            "You're welcome. Just let me know if you need anything else",
+            "No problem. Just let me know if you need anything else",
+            "My pleasure. Just let me know if you need anything else"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1516824993307",
+      "metadata": {},
+      "conditions": "#Thanks",
+      "dialog_node": "node_2_1468243505617",
+      "previous_sibling": "node_12_1468329566917"
+    },
+    {
+      "type": "standard",
+      "output": {},
+      "parent": "node_1_1516824993307",
+      "metadata": {},
+      "conditions": "#General_Greetings",
+      "dialog_node": "node_13_1502484041694"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter square footage of the land space"
+      },
+      "parent": "slot_49_1553772916647",
+      "event_name": "focus",
+      "dialog_node": "handler_51_1553772916647",
+      "previous_sibling": "handler_50_1553772916647"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_49_1553772916647",
+      "context": {
+        "sqft_lot": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_50_1553772916647"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_61_1553768581035",
+      "context": {
+        "bedrooms": "<? @sys-number ?>"
+      },
+      "metadata": {},
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_62_1553768581035",
+      "previous_sibling": "handler_63_1553768581035"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter number of bedrooms"
+      },
+      "parent": "slot_61_1553768581035",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_63_1553768581035"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$grade",
+      "dialog_node": "slot_34_1553772832250",
+      "previous_sibling": "slot_31_1553772815940"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$sqft_living15",
+      "dialog_node": "slot_43_1553772882090",
+      "previous_sibling": "slot_40_1553772863254"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$sqft_lot",
+      "dialog_node": "slot_49_1553772916647",
+      "previous_sibling": "slot_52_1553772927305"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$view",
+      "dialog_node": "slot_28_1553772798735",
+      "previous_sibling": "slot_25_1553772724200"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$sqft_living",
+      "dialog_node": "slot_52_1553772927305",
+      "previous_sibling": "slot_9_1553772441778"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$floors",
+      "dialog_node": "slot_22_1553772656547",
+      "previous_sibling": "slot_49_1553772916647"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$bathrooms",
+      "dialog_node": "slot_9_1553772441778",
+      "previous_sibling": "slot_61_1553768581035"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$condition",
+      "dialog_node": "slot_31_1553772815940",
+      "previous_sibling": "slot_28_1553772798735"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$sqft_lot15",
+      "dialog_node": "slot_46_1553772898513",
+      "previous_sibling": "slot_43_1553772882090"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_1_1553753137158",
+      "disabled": true,
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_5_1553754539181",
+      "previous_sibling": "slot_46_1553772898513"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$sqft_basement",
+      "dialog_node": "slot_40_1553772863254",
+      "previous_sibling": "slot_37_1553772846275"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$sqft_above",
+      "dialog_node": "slot_37_1553772846275",
+      "previous_sibling": "slot_34_1553772832250"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$waterfront",
+      "dialog_node": "slot_25_1553772724200",
+      "previous_sibling": "slot_22_1553772656547"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553753137158",
+      "metadata": {},
+      "variable": "$bedrooms",
+      "dialog_node": "slot_61_1553768581035"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please rate the property from 0 to 4 of how good the view of the property was (0-worst, 4-best)"
+      },
+      "parent": "slot_28_1553772798735",
+      "event_name": "focus",
+      "dialog_node": "handler_30_1553772798735",
+      "previous_sibling": "handler_29_1553772798735"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_28_1553772798735",
+      "context": {
+        "view": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_29_1553772798735"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter the square footage of interior housing living space for the nearest 15 neighbors"
+      },
+      "parent": "slot_43_1553772882090",
+      "event_name": "focus",
+      "dialog_node": "handler_45_1553772882090",
+      "previous_sibling": "handler_44_1553772882090"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_43_1553772882090",
+      "context": {
+        "sqft_living15": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_44_1553772882090"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter the square footage of the land lots of the nearest 15 neighbors"
+      },
+      "parent": "slot_46_1553772898513",
+      "event_name": "focus",
+      "dialog_node": "handler_48_1553772898513",
+      "previous_sibling": "handler_47_1553772898513"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_46_1553772898513",
+      "context": {
+        "sqft_lot15": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_47_1553772898513"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter the square footage of the interior housing space that is above ground level"
+      },
+      "parent": "slot_37_1553772846275",
+      "event_name": "focus",
+      "dialog_node": "handler_39_1553772846275",
+      "previous_sibling": "handler_38_1553772846275"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_37_1553772846275",
+      "context": {
+        "sqft_above": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_38_1553772846275"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please give a grade to construction and design from 1 to 13, where 1-3 falls short of building construction and design, 7 has an average level of construction and design, and 11-13 have a high quality level of construction and design."
+      },
+      "parent": "slot_34_1553772832250",
+      "event_name": "focus",
+      "dialog_node": "handler_36_1553772832250",
+      "previous_sibling": "handler_35_1553772832250"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_34_1553772832250",
+      "context": {
+        "grade": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_35_1553772832250"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter number of floors"
+      },
+      "parent": "slot_22_1553772656547",
+      "event_name": "focus",
+      "dialog_node": "handler_24_1553772656547",
+      "previous_sibling": "handler_23_1553772656547"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_22_1553772656547",
+      "context": {
+        "floors": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_23_1553772656547"
+    },
+    {
+      "type": "frame",
+      "title": "Get Prediction",
+      "output": {
+        "text": {
+          "values": [
+            "Thanks for entering  bedrooms $bedrooms bathrooms $bathrooms sqft_living $sqft_living sqft_lot $sqft_lot floors $floors waterfront $waterfront view $view condition $condition grade $grade sqft_above $sqft_above sqft_basement $sqft_basement sqft_living15 $sqft_living15\tsqft_lot15 $sqft_lot15\n",
+            ""
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {
+        "fallback": "leave"
+      },
+      "conditions": "#Get_Prediction",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1553753137158",
+      "digress_out": "allow_all",
+      "previous_sibling": "Opening",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [
+            "I didn't understand can you try again"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "digress_in": "returns",
+      "dialog_node": "node_2_1467831978407",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1516824993307"
+    },
+    {
+      "type": "folder",
+      "title": "Small Talk",
+      "metadata": {},
+      "digress_in": "not_available",
+      "dialog_node": "node_1_1516824993307",
+      "previous_sibling": "node_1_1553753137158"
+    },
+    {
+      "type": "standard",
+      "title": "Opening",
+      "output": {
+        "text": {
+          "values": [
+            "Hello, I’m your guide for real estate property price prediction! I have been trained with a real dataset and I can provide you with the price of recently built properties.",
+            "Hi, I am a real estate house price predictor! Ask me about any house with details provided and I can calculate the approximate price of the house :)"
+          ],
+          "selection_policy": "random"
+        }
+      },
+      "context": {
+        "no_reservation": true
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Opening"
+    }
+  ],
+  "workspace_id": "568764da-3dcd-48bd-aaba-01716d9e6f20",
+  "counterexamples": [
+    {
+      "text": "what is your nickname"
+    },
+    {
+      "text": "where is the best place to commit suicide"
+    },
+    {
+      "text": "wil it rain today"
+    },
+    {
+      "text": "yes"
+    }
+  ],
+  "learning_opt_out": false,
+  "status": "Available"
+}
